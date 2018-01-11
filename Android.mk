@@ -11,6 +11,8 @@ else ifneq ($(filter msm8x26,$(TARGET_BOARD_PLATFORM)),)
   include $(call all-named-subdir-makefiles,msm8226)
 else ifneq ($(filter msm8992,$(TARGET_BOARD_PLATFORM)),)
   include $(call all-named-subdir-makefiles,msm8994)
+else ifneq ($(filter bacon, $(TARGET_DEVICE)),)
+  include $(call all-named-subdir-makefiles,msm8994)
 else ifneq ($(wildcard $(LOCAL_PATH)/$(TARGET_BOARD_PLATFORM)),)
   include $(call all-named-subdir-makefiles,$(TARGET_BOARD_PLATFORM))
 endif
