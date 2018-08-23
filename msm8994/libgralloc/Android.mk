@@ -35,6 +35,7 @@ LOCAL_COPY_HEADERS            := gralloc_priv.h gr.h
 
 LOCAL_STATIC_LIBRARIES        := libgralloc1-adapter
 LOCAL_SHARED_LIBRARIES        += libsync
+LOCAL_CFLAGS += -Wno-error
 
 ifeq ($(TARGET_USES_GRALLOC1_ADAPTER), true)
 LOCAL_CFLAGS += -DADVERTISE_GRALLOC1
@@ -56,5 +57,6 @@ LOCAL_CFLAGS                  := $(common_flags) -DLOG_TAG=\"qdmemalloc\"
 LOCAL_ADDITIONAL_DEPENDENCIES := $(common_deps) $(kernel_deps)
 LOCAL_SRC_FILES               := ionalloc.cpp alloc_controller.cpp
 LOCAL_COPY_HEADERS            := alloc_controller.h memalloc.h
+LOCAL_CFLAGS += -Wno-error
 
 include $(BUILD_SHARED_LIBRARY)
