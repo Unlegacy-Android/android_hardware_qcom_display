@@ -35,5 +35,7 @@ LOCAL_CFLAGS                    := $(common_flags)
 LOCAL_CFLAGS                    += -DLOG_TAG=\"DisplayMetaData\"
 LOCAL_MODULE_TAGS               := optional
 LOCAL_MODULE                    := libqdMetaData
+LOCAL_CFLAGS += -Wno-error
+
 include $(BUILD_SHARED_LIBRARY)
 

@@ -21,5 +21,6 @@ LOCAL_SRC_FILES := \
       overlayMdssRot.cpp \
       overlayWriteback.cpp \
       pipes/overlayGenPipe.cpp
+LOCAL_CFLAGS += -Wno-error
 
 include $(BUILD_SHARED_LIBRARY)
